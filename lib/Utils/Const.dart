@@ -7,6 +7,8 @@ class AllStrings{
    static const actionButtonLabel = "হেল্প" ;
    static const fabText = "কাস্টমার যোগ করি";
  static const qrText = "সুপার QR কোড এক্টিভ করুন";
+ static const allDue =   "মোট পাবো";
+ static const allLoan =   "মোট পাবো";
 
 
 }

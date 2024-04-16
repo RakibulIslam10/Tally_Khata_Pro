@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:talikhatapro/Screens/Cash_Box_Screen.dart';
+import 'package:talikhatapro/Screens/Menu_Screen.dart';
 import 'package:talikhatapro/Screens/Tally_Screen.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
+import 'package:talikhatapro/Widget/Fab_Button.dart';
 
 class MainBottomNavScreen extends StatefulWidget {
   const MainBottomNavScreen({super.key});
@@ -15,9 +18,9 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
 
   final List<Widget> _screens = [
     const TallyScreen(),
+    const CashBoxScreen(),
     const TallyScreen(),
-    const TallyScreen(),
-    const TallyScreen(),
+    const MenuScreen(),
   ];
 
   @override
@@ -52,6 +55,7 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
           ],
         ),
       ),
+      floatingActionButton: fabButton(context),
     );
   }
 }
