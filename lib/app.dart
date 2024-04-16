@@ -16,9 +16,13 @@ class TallyKhataPro extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
       theme: ThemeData(
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(foregroundColor: Colors.white),
-        appBarTheme: const AppBarTheme(backgroundColor: AppColors.primaryColor),
-      ),
+          floatingActionButtonTheme: const FloatingActionButtonThemeData(
+              foregroundColor: Colors.white),
+          appBarTheme:
+              const AppBarTheme(backgroundColor: AppColors.primaryColor),
+          inputDecorationTheme:  InputDecorationTheme(
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(18)),
+          )),
     );
   }
 }
