@@ -8,7 +8,7 @@ class SplashScreenController extends GetxController {
 
   static Future<void> goToMainPage() async {
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 50),
           () => Get.offAll(const MainBottomNavScreen()),
     );
   }
