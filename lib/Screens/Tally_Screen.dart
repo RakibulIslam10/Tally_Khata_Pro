@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
@@ -48,7 +49,7 @@ class TallyScreen extends StatelessWidget {
             ),
             allDueAndLoanBox(),
             const SizedBox(
-              height: 18,
+              height: 16,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -72,7 +73,7 @@ class TallyScreen extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "কাস্টমার 3",
+                        "কাস্টমার ৫",
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
                       Text(
@@ -99,6 +100,39 @@ class TallyScreen extends StatelessWidget {
                     ],
                   )
                 ],
+              ),
+            ),
+            const SizedBox(height: 10),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return const ListTile(
+                    trailing: Wrap(
+                      children: [
+                        Text(
+                          "২৫০.০০",
+                          style: TextStyle(
+                              fontSize: 16, color: AppColors.primaryColor),
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          ">",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ],
+                    ),
+                    leading: CircleAvatar(
+                      backgroundColor: AppColors.orange,
+                      child: Text(
+                        "R",
+                        style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
+                      ),
+                    ),
+                    title: Text("রাকিব ভাই "),
+                    subtitle: Text("২ দিন "),
+                  );
+                },
               ),
             )
           ],

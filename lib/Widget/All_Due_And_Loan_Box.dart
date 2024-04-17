@@ -22,7 +22,7 @@ import 'package:talikhatapro/Utils/Const.dart';
                       fontSize: 18, fontWeight: FontWeight.w400),
                 ),
                 Text(
-                  "240",
+                  "২৫০",
                   style: TextStyle(
                       color: AppColors.red,
                       fontSize: 20,
@@ -40,7 +40,7 @@ import 'package:talikhatapro/Utils/Const.dart';
                       fontSize: 18, fontWeight: FontWeight.w400),
                 ),
                 Text(
-                  "100",
+                  "২২০",
                   style: TextStyle(
                       color: AppColors.green,
                       fontSize: 20,
