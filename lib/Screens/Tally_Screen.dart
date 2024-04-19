@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
@@ -123,7 +122,7 @@ class TallyScreen extends StatelessWidget {
                       ],
                     ),
                     leading: CircleAvatar(
-                      backgroundColor: AppColors.orange,
+                      backgroundColor: AppColors.deepOrange,
                       child: Text(
                         "R",
                         style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
