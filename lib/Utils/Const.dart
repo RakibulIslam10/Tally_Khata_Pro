@@ -7,10 +7,15 @@ class AllStrings{
    static const help = "হেল্প" ;
    static const fabText = "কাস্টমার যোগ করি";
    static const qrText = "সুপার QR কোড এক্টিভ করুন";
-   static const allDue =   "মোট পাবো";
-   static const allLoan =   "মোট পাবো";
-   static const inbox =   "ইনবক্স";
-   // static const inbox =   "ইনবক্স";
+   static const allDue = "মোট পাবো";
+   static const allLoan = "মোট পাবো";
+   static const inbox = "ইনবক্স";
+   static const todaySell = "ইনবক্স";
+   static const presentCash = "ইনবক্স";
+   static const todayCollect = "ইনবক্স";
+   static const todayPaid = "ইনবক্স";
+   static const report = "ইনবক্স";
+   static const cashBoxMatched = "ইনবক্স";
 
 
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
+import 'package:talikhatapro/Utils/Const.dart';
 
 class CashboxDetails extends StatelessWidget {
   const CashboxDetails({
@@ -13,7 +14,7 @@ class CashboxDetails extends StatelessWidget {
         Container(
           height: 80,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration:const BoxDecoration(
             color: AppColors.peach,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(15),
@@ -28,7 +29,7 @@ class CashboxDetails extends StatelessWidget {
                 // Added this line
                 children: [
                   Text(
-                    'Today Sell',
+                    AllStrings.todaySell,
                     style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   Text(
@@ -43,7 +44,7 @@ class CashboxDetails extends StatelessWidget {
                 // Added this line
                 children: [
                   Text(
-                    'Now Cash',
+                    AllStrings.presentCash,
                     style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   Text(
@@ -72,8 +73,7 @@ class CashboxDetails extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 // Added this line
                 children: [
-                  Text(
-                    'Today recived',
+                  Text(AllStrings.todayCollect,
                     style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   SizedBox(
@@ -90,8 +90,7 @@ class CashboxDetails extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 // Added this line
                 children: [
-                  Text(
-                    'Today paid',
+                  Text(AllStrings.todayPaid,
                     style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   SizedBox(

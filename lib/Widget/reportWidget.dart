@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
+import 'package:talikhatapro/Utils/Const.dart';
 
 class ReportWidget extends StatelessWidget {
   const ReportWidget({
@@ -20,7 +21,7 @@ class ReportWidget extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(top: 5.0,right: 8.0,bottom: 5.0,left: 8.0),
               child: Row(
-                children: [Icon(Icons.report_outlined), Text('Report')],
+                children: [Icon(Icons.report_outlined), Text(AllStrings.report)],
               ),
             ),
           ),
@@ -36,7 +37,7 @@ class ReportWidget extends StatelessWidget {
                     children: [
                       Icon(Icons.connecting_airports_sharp),
                       SizedBox(width: 8),
-                      Text('Cashbox matched')
+                      Text(AllStrings.cashBoxMatched)
                     ],
                   ),
                 ),
