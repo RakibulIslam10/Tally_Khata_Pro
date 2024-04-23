@@ -10,12 +10,11 @@ class AllStrings{
    static const allDue = "মোট পাবো";
    static const allLoan = "মোট পাবো";
    static const inbox = "ইনবক্স";
-   static const todaySell = "ইনবক্স";
-   static const presentCash = "ইনবক্স";
-   static const todayCollect = "ইনবক্স";
-   static const todayPaid = "ইনবক্স";
-   static const report = "ইনবক্স";
-   static const cashBoxMatched = "ইনবক্স";
-
+   static const todaySell = "আজকের বেচা";
+   static const presentCash = "বর্তমান ক্যাশ";
+   static const todayCollect = "আজ পেলাম";
+   static const todayPaid = "আজ দিলাম";
+   static const report = "রিপোর্ট";
+   static const cashBoxMatched = "ক্যাশ মিলাই";
 
 }
