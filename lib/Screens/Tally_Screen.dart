@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talikhatapro/Utils/All_Image.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
 import 'package:talikhatapro/Widget/All_Due_And_Loan_Box.dart';
@@ -20,19 +21,35 @@ class TallyScreen extends StatelessWidget {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           actions: [
-            TextButton.icon(
-              onPressed: () {
-                // Add your onPressed logic here
+            // TextButton.icon(
+            //   onPressed: () {
+            //     // Add your onPressed logic here
+            //   },
+            //   icon: const Icon(
+            //     Icons.help_outline_sharp,
+            //     color: Colors.black,
+            //   ),
+            //   label: const Text(
+            //     AllStrings.help,
+            //     style: TextStyle(color: Colors.black),
+            //   ),
+            // ),
+
+            // GestureDetector created by Khairul 23-April-2024
+            GestureDetector(
+              onTap: () {
+
               },
-              icon: const Icon(
-                Icons.help_outline_sharp,
-                color: Colors.black,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    SizedBox(height: 20,width: 20, child: Image.asset(Allimage.supportIcon),),
+                    const Text(AllStrings.help),
+                  ],
+                ),
               ),
-              label: const Text(
-                AllStrings.actionButtonLabel,
-                style: TextStyle(color: Colors.black),
-              ),
-            ),
+            )
           ],
           leading: IconButton(
               onPressed: () {},

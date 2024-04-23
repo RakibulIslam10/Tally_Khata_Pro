@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:talikhatapro/Utils/App_Color.dart'; // Ensure you import your App_Color.dart file
+import 'package:talikhatapro/Utils/App_Color.dart';
+import 'package:talikhatapro/Utils/Const.dart'; // Ensure you import your App_Color.dart file
 
 List<Map<String, dynamic>> _category = [
   {
@@ -123,7 +124,7 @@ class MenuScreen extends StatelessWidget {
                                 const Expanded(
                                   child: SizedBox(
                                     child: Text(
-                                      'সুপার QR কোড একটিভ করুন',
+                                      AllStrings.qrText,
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,

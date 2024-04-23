@@ -39,3 +39,62 @@ qrCodeBox() {
         ),
       ));
 }
+
+
+
+Container QrCodeActivationBox(BuildContext context) {
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.08,
+    width: double.infinity,
+    color: AppColors.secondaryColor,
+    child: Padding(
+      padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.05,
+          vertical: MediaQuery.of(context).size.height * 0.01),
+      child: InkWell(
+        onTap: () {
+          //'সুপার QR কোড একটিভ করুন' Business Logic
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Row(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    width: MediaQuery.of(context).size.height * 0.05,
+                    decoration: BoxDecoration(
+                      color: AppColors.deepOrange,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: const Center(
+                      child: Icon(Icons.category_outlined,
+                          color: AppColors.backgroundColor,
+                          size: 25),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  const Expanded(
+                    child: SizedBox(
+                      child: Text(
+                        'সুপার QR কোড একটিভ করুন',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                        maxLines: 2,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded,
+                color: AppColors.deepOrange),
+          ],
+        ),
+      ),
+    ),
+  );
+}
