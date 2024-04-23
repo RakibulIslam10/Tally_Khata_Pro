@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talikhatapro/Utils/App_Color.dart';
 
 class ReportWidget extends StatelessWidget {
   const ReportWidget({
@@ -14,12 +15,12 @@ class ReportWidget extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: Colors.red,
+                color: AppColors.peach,
                 borderRadius: BorderRadius.circular(50)),
-            child: Padding(
-              padding: const EdgeInsets.all(5.0),
+            child: const Padding(
+              padding: EdgeInsets.only(top: 5.0,right: 8.0,bottom: 5.0,left: 8.0),
               child: Row(
-                children: [Icon(Icons.report), Text('Report')],
+                children: [Icon(Icons.report_outlined), Text('Report')],
               ),
             ),
           ),
@@ -27,26 +28,26 @@ class ReportWidget extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: AppColors.lightGray,
                     borderRadius: BorderRadius.circular(50)),
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 5.0,right: 8.0,bottom: 5.0,left: 8.0),
                   child: Row(
                     children: [
                       Icon(Icons.connecting_airports_sharp),
                       SizedBox(width: 8),
-                      Text('Report')
+                      Text('Cashbox matched')
                     ],
                   ),
                 ),
               ),
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: AppColors.lightGray,
                     borderRadius: BorderRadius.circular(50)),
-                child: Padding(
-                    padding: const EdgeInsets.all(5.0),
+                child:const Padding(
+                    padding:  EdgeInsets.all(5.0),
                     child: Icon(Icons.remove_red_eye_outlined)),
               ),
             ],

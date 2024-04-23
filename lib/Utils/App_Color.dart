@@ -9,6 +9,10 @@ class AppColors {
   static const grayWhite = Color(0xffffefe5);
   static const orange = Color(0xfff59952);
   static const deepOrange = Color(0xffff4a00);
-  static const halkaYello = Color(0xffd0ae71);
+  static const peach = Color(0xFFFACF7F);
+  static const lightPeach = Color(0xFFF8ECC9);
+  static const grayText = Color(0xFF5E5E5E);
+  static const lightGray = Color(0xFFECECEC);
+
 
 }

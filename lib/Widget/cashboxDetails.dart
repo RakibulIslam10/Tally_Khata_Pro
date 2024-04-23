@@ -13,7 +13,13 @@ class CashboxDetails extends StatelessWidget {
         Container(
           height: 80,
           width: double.infinity,
-          color: Colors.red,
+          decoration: BoxDecoration(
+            color: AppColors.peach,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(15),
+              topRight: Radius.circular(15),
+            ),
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -23,14 +29,11 @@ class CashboxDetails extends StatelessWidget {
                 children: [
                   Text(
                     'Today Sell',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: AppColors.backgroundColor),
+                    style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   Text(
                     '0',
-                    style:
-                    TextStyle(fontSize: 16, color: Colors.black),
+                    style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                 ],
               ),
@@ -41,14 +44,11 @@ class CashboxDetails extends StatelessWidget {
                 children: [
                   Text(
                     'Now Cash',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: AppColors.backgroundColor),
+                    style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   Text(
                     '0',
-                    style:
-                    TextStyle(fontSize: 16, color: Colors.black),
+                    style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                 ],
               ),
@@ -58,7 +58,13 @@ class CashboxDetails extends StatelessWidget {
         Container(
           height: 40,
           width: double.infinity,
-          color: Colors.orange,
+          decoration: BoxDecoration(
+            color: AppColors.lightPeach,
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(15),
+              bottomRight: Radius.circular(15),
+            ),
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -68,17 +74,14 @@ class CashboxDetails extends StatelessWidget {
                 children: [
                   Text(
                     'Today recived',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: AppColors.backgroundColor),
+                    style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Text(
                     '0',
-                    style:
-                    TextStyle(fontSize: 16, color: Colors.black),
+                    style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                 ],
               ),
@@ -89,17 +92,14 @@ class CashboxDetails extends StatelessWidget {
                 children: [
                   Text(
                     'Today paid',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: AppColors.backgroundColor),
+                    style: TextStyle(fontSize: 16, color: AppColors.grayText),
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Text(
                     '0',
-                    style:
-                    TextStyle(fontSize: 16, color: Colors.black),
+                    style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                 ],
               ),

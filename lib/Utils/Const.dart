@@ -10,6 +10,7 @@ class AllStrings{
    static const allDue =   "মোট পাবো";
    static const allLoan =   "মোট পাবো";
    static const inbox =   "ইনবক্স";
+   // static const inbox =   "ইনবক্স";
 
 
 }
