@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:talikhatapro/Utils/All_Image.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
+import 'package:talikhatapro/Widget/bodyList.dart';
 import 'package:talikhatapro/Widget/cashboxDetails.dart';
 import 'package:talikhatapro/Widget/reportWidget.dart';
 
 class CashBoxScreen extends StatelessWidget {
-  const CashBoxScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,13 +59,30 @@ class CashBoxScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Center(
+      body: Center(
         child: Padding(
           padding: EdgeInsets.all(12.0),
           child: Column(
             children: [
               CashboxDetails(),
-              ReportWidget()
+              ReportWidget(),
+              SizedBox(height: 10),
+              Container(
+                width: double.infinity,
+                color: AppColors.lightGray,
+                child: const Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(AllStrings.dueCollect + ' 0'),
+                      Text(AllStrings.paidPayment + ' 0')
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              BodyList()
             ],
           ),
         ),
@@ -73,7 +90,5 @@ class CashBoxScreen extends StatelessWidget {
     );
   }
 }
-
-
 
 

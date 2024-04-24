@@ -1,18 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
 
 class CashboxDetails extends StatelessWidget {
-  const CashboxDetails({
-    super.key,
-  });
+  const CashboxDetails({super.key});
+
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size.width;
-    final screenWidthHalf = screenSize / 2.1;
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidthHalf = screenSize.width / 2.1;
 
     return Stack(
       children: [
@@ -20,8 +17,9 @@ class CashboxDetails extends StatelessWidget {
           height: 120,
           width: double.infinity,
           decoration: const BoxDecoration(
-              color: AppColors.peach,
-              borderRadius: BorderRadius.all(Radius.circular(15))),
+            color: AppColors.peach,
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+          ),
         ),
         Positioned(
           left: 0,
@@ -40,90 +38,64 @@ class CashboxDetails extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  // Added this line
-                  children: [
-                    Text(
-                      AllStrings.todayCollect,
-                      style: TextStyle(
-                          fontSize: 16, color: AppColors.grayText),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      '0',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 5),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  // Added this line
-                  children: [
-                    Text(
-                      AllStrings.todayPaid,
-                      style: TextStyle(
-                          fontSize: 16, color: AppColors.grayText),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      '0',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
-                    ),
-                  ],
-                ),
+                _buildInfoRow(AllStrings.todayCollect, '0'),
+                _buildInfoRow(AllStrings.todayPaid, '0'),
               ],
             ),
           ),
         ),
         Positioned(
-            left: screenWidthHalf,
-            top: 90,
-            child: Container(height: 20, width: 2, color: Colors.grey)),
+          left: screenWidthHalf,
+          top: 90,
+          child: Container(height: 20, width: 2, color: Colors.grey),
+        ),
         Positioned(
-            left: screenWidthHalf,
-            top: 35,
-            child: Container(height: 20, width: 2, color: Colors.grey)),
+          left: screenWidthHalf,
+          top: 35,
+          child: Container(height: 20, width: 2, color: Colors.grey),
+        ),
         Positioned(
-          top: 20,
-          left: 45,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            // Added this line
+          left: 0,
+          right: 0,
+          top: 10,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
-                AllStrings.todaySell,
-                style: TextStyle(fontSize: 16, color: AppColors.grayText),
-              ),
-              Text(
-                '0',
-                style: TextStyle(fontSize: 16, color: Colors.black),
-              ),
+              _buildColumn(AllStrings.todaySell, '0'),
+              _buildColumn(AllStrings.presentCash, '0'),
             ],
           ),
         ),
-        Positioned(
-          top: 20,
-          right: 45,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            // Added this line
-            children: [
-              Text(
-                AllStrings.presentCash,
-                style: TextStyle(fontSize: 16, color: AppColors.grayText),
-              ),
-              Text(
-                '0',
-                style: TextStyle(fontSize: 16, color: Colors.black),
-              ),
-            ],
-          ),
+      ],
+    );
+  }
+
+  Widget _buildInfoRow(String title, String value) {
+    return Row(
+      children: [
+        Text(
+          title,
+          style: const TextStyle(fontSize: 16, color: AppColors.grayText),
+        ),
+        const SizedBox(width: 5),
+        Text(
+          value,
+          style: const TextStyle(fontSize: 16, color: Colors.black),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildColumn(String title, String value) {
+    return Column(
+      children: [
+        Text(
+          title,
+          style: const TextStyle(fontSize: 16, color: AppColors.grayText),
+        ),
+        Text(
+          value,
+          style: const TextStyle(fontSize: 16, color: Colors.black),
         ),
       ],
     );

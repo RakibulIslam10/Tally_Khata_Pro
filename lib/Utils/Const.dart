@@ -16,5 +16,7 @@ class AllStrings{
    static const todayPaid = "আজ দিলাম";
    static const report = "রিপোর্ট";
    static const cashBoxMatched = "ক্যাশ মিলাই";
+   static const dueCollect = "বাকি আদায়";
+   static const paidPayment = "পেমেন্ট দেয়া";
 
 }

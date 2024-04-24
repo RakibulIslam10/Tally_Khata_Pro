@@ -18,7 +18,7 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
 
   final List<Widget> _screens = [
     const TallyScreen(),
-    const CashBoxScreen(),
+    CashBoxScreen(),
     const TallyScreen(),
     const MenuScreen(),
   ];
