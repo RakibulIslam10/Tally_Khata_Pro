@@ -18,9 +18,10 @@ class TallyKhataPro extends StatelessWidget {
       theme: ThemeData(
           floatingActionButtonTheme: const FloatingActionButtonThemeData(
               foregroundColor: Colors.white),
-          appBarTheme:
-              const AppBarTheme(backgroundColor: AppColors.primaryColor,),
-          inputDecorationTheme:  InputDecorationTheme(
+          appBarTheme: const AppBarTheme(
+            backgroundColor: AppColors.backgroundColor,
+          ),
+          inputDecorationTheme: InputDecorationTheme(
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(18)),
           )),
     );

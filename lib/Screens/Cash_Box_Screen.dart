@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:talikhatapro/Utils/All_Image.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
+import 'package:talikhatapro/Widget/Fab_Button.dart';
 import 'package:talikhatapro/Widget/bodyList.dart';
 import 'package:talikhatapro/Widget/cashboxDetails.dart';
 import 'package:talikhatapro/Widget/reportWidget.dart';
@@ -10,6 +11,7 @@ class CashBoxScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.backgroundColor,
@@ -87,7 +89,7 @@ class CashBoxScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
+        floatingActionButton: fabButton(context));
   }
 }
 

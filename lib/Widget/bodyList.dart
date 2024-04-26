@@ -26,6 +26,7 @@ class BodyList extends StatelessWidget {
     return Column(
       children: [
         ListTile(
+          contentPadding: EdgeInsets.zero,
           leading: Container(
             height: 50,
             width: 50,
@@ -43,7 +44,7 @@ class BodyList extends StatelessWidget {
             children: [
               Text('0.0'),
               SizedBox(width: 10),
-              Icon(Icons.arrow_forward_ios_sharp),
+              Icon(Icons.arrow_forward_ios_sharp, size: 12,),
             ],
           ),
         ),

@@ -55,7 +55,6 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
           ],
         ),
       ),
-      floatingActionButton: fabButton(context),
     );
   }
 }

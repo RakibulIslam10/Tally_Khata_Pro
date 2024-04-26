@@ -14,145 +14,131 @@ class TallyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: AppColors.backgroundColor,
-          title: const Text(
-            "ভাই ভাই স্টোর",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          ),
-          actions: [
-            // TextButton.icon(
-            //   onPressed: () {
-            //     // Add your onPressed logic here
-            //   },
-            //   icon: const Icon(
-            //     Icons.help_outline_sharp,
-            //     color: Colors.black,
-            //   ),
-            //   label: const Text(
-            //     AllStrings.help,
-            //     style: TextStyle(color: Colors.black),
-            //   ),
-            // ),
-
-            // GestureDetector created by Khairul 23-April-2024
-            GestureDetector(
-              onTap: () {
-
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    SizedBox(height: 20,width: 20, child: Image.asset(Allimage.supportIcon),),
-                    const Text(AllStrings.help),
-                  ],
-                ),
-              ),
-            )
-          ],
-          leading: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.qr_code_outlined,
-              )),
+      appBar: AppBar(
+        backgroundColor: AppColors.backgroundColor,
+        title: const Text(
+          "ভাই ভাই স্টোর",
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
-        body: Column(
-          children: [
-            qrCodeBox(),
-            const SizedBox(
-              height: 15,
-            ),
-            allDueAndLoanBox(),
-            const SizedBox(
-              height: 16,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        actions: [
+          // GestureDetector created by Khairul 23-April-2024
+          GestureDetector(
+            onTap: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
                 children: [
-                  searchBar(),
-                  const SizedBox(width: 10),
-                  threeIcons()
+                  SizedBox(
+                    height: 20,
+                    width: 20,
+                    child: Image.asset(Allimage.supportIcon),
+                  ),
+                  const Text(AllStrings.help),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 16,
+          ),
+        ],
+        leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.qr_code_outlined,
+            )),
+      ),
+      body: Column(
+        children: [
+          qrCodeBox(),
+          const SizedBox(
+            height: 15,
+          ),
+          allDueAndLoanBox(),
+          const SizedBox(
+            height: 16,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [searchBar(), const SizedBox(width: 10), threeIcons()],
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      "কাস্টমার ৫",
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      " / ",
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      "সাপ্লায়ার 0",
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "পাবো",
+                      style: TextStyle(color: AppColors.primaryColor),
+                    ),
+                    Text(" / "),
+                    Text(
+                      "দেবো ",
+                      style: TextStyle(color: AppColors.green),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 4,
+              itemBuilder: (context, index) {
+                return const ListTile(
+                  trailing: Wrap(
                     children: [
                       Text(
-                        "কাস্টমার ৫",
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        "২৫০.০০",
+                        style: TextStyle(
+                            fontSize: 16, color: AppColors.primaryColor),
                       ),
+                      SizedBox(width: 10),
                       Text(
-                        " / ",
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        "সাপ্লায়ার 0",
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        ">",
+                        style: TextStyle(fontSize: 16),
                       ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "পাবো",
-                        style: TextStyle(color: AppColors.primaryColor),
-                      ),
-                      Text(" / "),
-                      Text(
-                        "দেবো ",
-                        style: TextStyle(color: AppColors.green),
-                      ),
-                    ],
-                  )
-                ],
-              ),
+                  leading: CircleAvatar(
+                    backgroundColor: AppColors.deepOrange,
+                    child: Text(
+                      "R",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ),
+                  title: Text("রাকিব ভাই "),
+                  subtitle: Text("২ দিন "),
+                );
+              },
             ),
-            const SizedBox(height: 10),
-            Expanded(
-              child: ListView.builder(
-                itemCount: 4,
-                itemBuilder: (context, index) {
-                  return const ListTile(
-                    trailing: Wrap(
-                      children: [
-                        Text(
-                          "২৫০.০০",
-                          style: TextStyle(
-                              fontSize: 16, color: AppColors.primaryColor),
-                        ),
-                        SizedBox(width: 10),
-                        Text(
-                          ">",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                      ],
-                    ),
-                    leading: CircleAvatar(
-                      backgroundColor: AppColors.deepOrange,
-                      child: Text(
-                        "R",
-                        style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
-                      ),
-                    ),
-                    title: Text("রাকিব ভাই "),
-                    subtitle: Text("২ দিন "),
-                  );
-                },
-              ),
-            )
-          ],
-        ),
-        floatingActionButton: fabButton(context));
+          )
+        ],
+      ),
+      floatingActionButton: fabButton(context),
+    );
   }
 }
