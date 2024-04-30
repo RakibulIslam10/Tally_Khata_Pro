@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:talikhatapro/Screens/Cash_Box_Screen.dart';
 import 'package:talikhatapro/Screens/Menu_Screen.dart';
 import 'package:talikhatapro/Screens/Tally_Screen.dart';
+import 'package:talikhatapro/Screens/wallet_screen.dart';
 import 'package:talikhatapro/Utils/App_Color.dart';
 import 'package:talikhatapro/Utils/Const.dart';
 import 'package:talikhatapro/Widget/Fab_Button.dart';
@@ -19,7 +20,7 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   final List<Widget> _screens = [
     const TallyScreen(),
     CashBoxScreen(),
-    const TallyScreen(),
+    const WalletScreen(),
     const MenuScreen(),
   ];
 

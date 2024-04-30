@@ -12,6 +12,7 @@ class AppColors {
   static const peach = Color(0xFFFACF7F);
   static const lightPeach = Color(0xFFF8ECC9);
   static const grayText = Color(0xFF5E5E5E);
+  static const gray = Color(0xFFDAD2D2);
   static const lightGray = Color(0xFFECECEC);
 
 

@@ -18,5 +18,10 @@ class AllStrings{
    static const cashBoxMatched = "ক্যাশ মিলাই";
    static const dueCollect = "বাকি আদায়";
    static const paidPayment = "পেমেন্ট দেয়া";
+   static const accountBalance = "একাউন্ট ব্যালেন্স";
+   static const todayQRpaymentRecived = "আজ QR পেমেন্ট পেলাম";
+   static const paymentText = "বিকাশ, রকেট ও ব্যাংক এপস থেকে পেমেন্ট দিন";
+   static const paymentText1 = "বব্যবসার সুযোগ বাড়ান";
+   static const takeSuperQR = "সুপার QR নিন";
 
 }
